@@ -64,5 +64,3 @@ RUN apt-mark hold ${NV_LIBCUBLAS_DEV_PACKAGE_NAME}
 # RUN apt-mark hold libcublas-dev-12-2
 
 ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
-
-RUN whereis nvcc && nvcc -V
