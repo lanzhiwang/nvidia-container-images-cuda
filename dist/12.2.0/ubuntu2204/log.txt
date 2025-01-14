@@ -326,3 +326,271 @@
 2025-01-14T05:40:08.5160914Z #6 0.262 ii  zlib1g:amd64                    1:1.2.11.dfsg-2ubuntu9.2                amd64        compression library - runtime
 2025-01-14T05:40:08.5161411Z #6 DONE 0.3s
 
+
+[1/2] FROM docker.io/nvidia/cuda:12.2.0-devel-ubuntu22.04@sha256:c4e81887e4aa9f13b1119337323cba89601319ecb282383b879c4ba50510fd17
+2025-01-14T05:44:21.2436573Z #6 [2/2] RUN set -ex; 	env; 	dpkg -l
+2025-01-14T05:44:21.5934397Z #6 0.500 + env
+2025-01-14T05:44:21.7605558Z #6 0.501 LIBRARY_PATH=/usr/local/cuda/lib64/stubs
+2025-01-14T05:44:21.7606400Z #6 0.501 NV_CUDA_COMPAT_PACKAGE=cuda-compat-12-2
+2025-01-14T05:44:21.7607086Z #6 0.501 NV_LIBCUBLAS_VERSION=12.2.1.16-1
+2025-01-14T05:44:21.7607981Z #6 0.501 NV_NVPROF_DEV_PACKAGE=cuda-nvprof-12-2=12.2.60-1
+2025-01-14T05:44:21.7608745Z #6 0.501 NV_CUDA_NSIGHT_COMPUTE_VERSION=12.2.0-1
+2025-01-14T05:44:21.7609544Z #6 0.501 LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2025-01-14T05:44:21.7610449Z #6 0.501 HOME=/root
+2025-01-14T05:44:21.7611005Z #6 0.501 NV_LIBCUBLAS_DEV_VERSION=12.2.1.16-1
+2025-01-14T05:44:21.7611888Z #6 0.501 NV_LIBNPP_PACKAGE=libnpp-12-2=12.1.1.14-1
+2025-01-14T05:44:21.7612721Z #6 0.501 CUDA_VERSION=12.2.0
+2025-01-14T05:44:21.7613309Z #6 0.501 NV_NVPROF_VERSION=12.2.60-1
+2025-01-14T05:44:21.7614114Z #6 0.501 NV_LIBCUBLAS_PACKAGE_NAME=libcublas-12-2
+2025-01-14T05:44:21.7618345Z #6 0.501 NVIDIA_REQUIRE_CUDA=cuda>=12.2 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526
+2025-01-14T05:44:21.7622526Z #6 0.501 NVIDIA_DRIVER_CAPABILITIES=compute,utility
+2025-01-14T05:44:21.7623070Z #6 0.501 NV_CUDA_LIB_VERSION=12.2.0-1
+2025-01-14T05:44:21.7623662Z #6 0.501 NV_LIBCUSPARSE_VERSION=12.1.1.53-1
+2025-01-14T05:44:21.7624066Z #6 0.501 NV_NVML_DEV_VERSION=12.2.81-1
+2025-01-14T05:44:21.7624833Z #6 0.501 NV_LIBNPP_DEV_PACKAGE=libnpp-dev-12-2=12.1.1.14-1
+2025-01-14T05:44:21.7625649Z #6 0.501 NV_CUDA_CUDART_VERSION=12.2.53-1
+2025-01-14T05:44:21.7626630Z #6 0.501 PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2025-01-14T05:44:21.7627782Z #6 0.501 NVARCH=x86_64
+2025-01-14T05:44:21.7628357Z #6 0.501 NV_LIBCUBLAS_PACKAGE=libcublas-12-2=12.2.1.16-1
+2025-01-14T05:44:21.7629026Z #6 0.501 NV_LIBCUBLAS_DEV_PACKAGE_NAME=libcublas-dev-12-2
+2025-01-14T05:44:21.7629877Z #6 0.501 NV_LIBCUSPARSE_DEV_VERSION=12.1.1.53-1
+2025-01-14T05:44:21.7630474Z #6 0.501 NVIDIA_PRODUCT_NAME=CUDA
+2025-01-14T05:44:21.7631006Z #6 0.501 NV_CUDA_CUDART_DEV_VERSION=12.2.53-1
+2025-01-14T05:44:21.7631906Z #6 0.501 NV_LIBCUBLAS_DEV_PACKAGE=libcublas-dev-12-2=12.2.1.16-1
+2025-01-14T05:44:21.7632682Z #6 0.501 NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE=cuda-nsight-compute-12-2=12.2.0-1
+2025-01-14T05:44:21.7633436Z #6 0.501 NV_NVTX_VERSION=12.2.53-1
+2025-01-14T05:44:21.7634197Z #6 0.501 NV_LIBNPP_VERSION=12.1.1.14-1
+2025-01-14T05:44:21.7635395Z #6 0.501 ***
+2025-01-14T05:44:21.7636088Z #6 0.501 NVIDIA_VISIBLE_DEVICES=all
+2025-01-14T05:44:21.7636717Z #6 0.501 NV_LIBNPP_DEV_VERSION=12.1.1.14-1
+2025-01-14T05:44:21.7638337Z #6 0.501 + dpkg -l
+2025-01-14T05:44:21.7639046Z #6 0.506 Desired=Unknown/Install/Remove/Purge/Hold
+2025-01-14T05:44:21.7639944Z #6 0.506 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+2025-01-14T05:44:21.7640880Z #6 0.506 |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+2025-01-14T05:44:21.7641862Z #6 0.506 ||/ Name                            Version                                 Architecture Description
+2025-01-14T05:44:21.7642658Z #6 0.506 +++-===============================-=======================================-============-===============================================================================
+2025-01-14T05:44:21.7643485Z #6 0.506 ii  adduser                         3.118ubuntu5                            all          add and remove users and groups
+2025-01-14T05:44:21.7644519Z #6 0.506 ii  apt                             2.4.10                                  amd64        commandline package manager
+2025-01-14T05:44:21.7645418Z #6 0.506 ii  base-files                      12ubuntu4.4                             amd64        Debian base system miscellaneous files
+2025-01-14T05:44:21.7646450Z #6 0.506 ii  base-passwd                     3.5.52build1                            amd64        Debian base system master password and group files
+2025-01-14T05:44:21.7647433Z #6 0.506 ii  bash                            5.1-6ubuntu1                            amd64        GNU Bourne Again SHell
+2025-01-14T05:44:21.7648052Z #6 0.506 ii  binutils                        2.38-4ubuntu2.3                         amd64        GNU assembler, linker and binary utilities
+2025-01-14T05:44:21.7648843Z #6 0.506 ii  binutils-common:amd64           2.38-4ubuntu2.3                         amd64        Common files for the GNU assembler, linker and binary utilities
+2025-01-14T05:44:21.7649640Z #6 0.506 ii  binutils-x86-64-linux-gnu       2.38-4ubuntu2.3                         amd64        GNU binary utilities, for x86-64-linux-gnu target
+2025-01-14T05:44:21.7650648Z #6 0.506 ii  bsdutils                        1:2.37.2-4ubuntu3                       amd64        basic utilities from 4.4BSD-Lite
+2025-01-14T05:44:21.7651907Z #6 0.506 ii  build-essential                 12.9ubuntu3                             amd64        Informational list of build-essential packages
+2025-01-14T05:44:21.7653063Z #6 0.506 ii  bzip2                           1.0.8-5build1                           amd64        high-quality block-sorting file compressor - utilities
+2025-01-14T05:44:21.7654293Z #6 0.506 ii  ca-certificates                 20230311ubuntu0.22.04.1                 all          Common CA certificates
+2025-01-14T05:44:21.7655561Z #6 0.506 ii  coreutils                       8.32-4.1ubuntu1                         amd64        GNU core utilities
+2025-01-14T05:44:21.7657367Z #6 0.506 ii  cpp                             4:11.2.0-1ubuntu1                       amd64        GNU C preprocessor (cpp)
+2025-01-14T05:44:21.7658320Z #6 0.506 ii  cpp-11                          11.4.0-1ubuntu1~22.04                   amd64        GNU C preprocessor
+2025-01-14T05:44:21.7659339Z #6 0.506 ii  cuda-cccl-12-2                  12.2.140-1                              amd64        CUDA CCCL
+2025-01-14T05:44:21.7660203Z #6 0.506 ii  cuda-command-line-tools-12-2    12.2.0-1                                amd64        CUDA command-line tools
+2025-01-14T05:44:21.7661491Z #6 0.506 ii  cuda-compat-12-2                535.129.03-1                            amd64        CUDA Compatibility Platform
+2025-01-14T05:44:21.7662472Z #6 0.506 ii  cuda-compiler-12-2              12.2.2-1                                amd64        CUDA compiler
+2025-01-14T05:44:21.7663369Z #6 0.506 ii  cuda-crt-12-2                   12.2.140-1                              amd64        CUDA crt
+2025-01-14T05:44:21.7664409Z #6 0.506 ii  cuda-cudart-12-2                12.2.53-1                               amd64        CUDA Runtime native Libraries
+2025-01-14T05:44:21.7665675Z #6 0.506 ii  cuda-cudart-dev-12-2            12.2.53-1                               amd64        CUDA Runtime native dev links, headers
+2025-01-14T05:44:21.7666819Z #6 0.506 ii  cuda-cuobjdump-12-2             12.2.140-1                              amd64        CUDA cuobjdump
+2025-01-14T05:44:21.7667927Z #6 0.506 ii  cuda-cupti-12-2                 12.2.142-1                              amd64        CUDA profiling tools runtime libs.
+2025-01-14T05:44:21.7668914Z #6 0.506 ii  cuda-cupti-dev-12-2             12.2.142-1                              amd64        CUDA profiling tools interface.
+2025-01-14T05:44:21.7669832Z #6 0.506 ii  cuda-cuxxfilt-12-2              12.2.140-1                              amd64        CUDA cuxxfilt
+2025-01-14T05:44:21.7670982Z #6 0.506 ii  cuda-driver-dev-12-2            12.2.140-1                              amd64        CUDA Driver native dev stub library
+2025-01-14T05:44:21.7671911Z #6 0.506 ii  cuda-gdb-12-2                   12.2.140-1                              amd64        CUDA-GDB
+2025-01-14T05:44:21.7672851Z #6 0.506 ii  cuda-keyring                    1.0-1                                   all          GPG keyring for the CUDA repository
+2025-01-14T05:44:21.7673989Z #6 0.506 ii  cuda-libraries-12-2             12.2.0-1                                amd64        CUDA Libraries 12.2 meta-package
+2025-01-14T05:44:21.7674828Z #6 0.506 ii  cuda-libraries-dev-12-2         12.2.0-1                                amd64        CUDA Libraries 12.2 development meta-package
+2025-01-14T05:44:21.7675589Z #6 0.506 ii  cuda-minimal-build-12-2         12.2.0-1                                amd64        Minimal CUDA 12.2 toolkit build packages.
+2025-01-14T05:44:21.7676607Z #6 0.506 ii  cuda-nsight-compute-12-2        12.2.0-1                                amd64        NVIDIA Nsight Compute
+2025-01-14T05:44:21.7677268Z #6 0.506 ii  cuda-nvcc-12-2                  12.2.140-1                              amd64        CUDA nvcc
+2025-01-14T05:44:21.7677931Z #6 0.506 ii  cuda-nvdisasm-12-2              12.2.140-1                              amd64        CUDA disassembler
+2025-01-14T05:44:21.7678767Z #6 0.506 ii  cuda-nvml-dev-12-2              12.2.81-1                               amd64        NVML native dev links, headers
+2025-01-14T05:44:21.7679314Z #6 0.506 ii  cuda-nvprof-12-2                12.2.60-1                               amd64        CUDA Profiler tools
+2025-01-14T05:44:21.7679955Z #6 0.506 ii  cuda-nvprune-12-2               12.2.140-1                              amd64        CUDA nvprune
+2025-01-14T05:44:21.7680515Z #6 0.506 ii  cuda-nvrtc-12-2                 12.2.140-1                              amd64        NVRTC native runtime libraries
+2025-01-14T05:44:21.7681056Z #6 0.506 ii  cuda-nvrtc-dev-12-2             12.2.140-1                              amd64        NVRTC native dev links, headers
+2025-01-14T05:44:21.7681718Z #6 0.506 ii  cuda-nvtx-12-2                  12.2.53-1                               amd64        NVIDIA Tools Extension
+2025-01-14T05:44:21.7682196Z #6 0.506 ii  cuda-nvvm-12-2                  12.2.140-1                              amd64        CUDA nvvm
+2025-01-14T05:44:21.7682709Z #6 0.506 ii  cuda-opencl-12-2                12.2.140-1                              amd64        CUDA OpenCL native Libraries
+2025-01-14T05:44:21.7683415Z #6 0.506 ii  cuda-opencl-dev-12-2            12.2.140-1                              amd64        CUDA OpenCL native dev links, headers
+2025-01-14T05:44:21.7684077Z #6 0.506 ii  cuda-profiler-api-12-2          12.2.140-1                              amd64        CUDA Profiler API
+2025-01-14T05:44:21.7684709Z #6 0.506 ii  cuda-sanitizer-12-2             12.2.140-1                              amd64        CUDA Sanitizer
+2025-01-14T05:44:21.7685375Z #6 0.506 ii  cuda-toolkit-12-2-config-common 12.2.140-1                              all          Common config package for CUDA Toolkit 12.2.
+2025-01-14T05:44:21.7686062Z #6 0.506 ii  cuda-toolkit-12-config-common   12.3.52-1                               all          Common config package for CUDA Toolkit 12.
+2025-01-14T05:44:21.7686971Z #6 0.506 ii  cuda-toolkit-config-common      12.3.52-1                               all          Common config package for CUDA Toolkit.
+2025-01-14T05:44:21.7687602Z #6 0.506 ii  dash                            0.5.11+git20210903+057cd650a4ed-3build1 amd64        POSIX-compliant shell
+2025-01-14T05:44:21.7688208Z #6 0.506 ii  debconf                         1.5.79ubuntu1                           all          Debian configuration management system
+2025-01-14T05:44:21.7688917Z #6 0.506 ii  debianutils                     5.5-1ubuntu2                            amd64        Miscellaneous utilities specific to Debian
+2025-01-14T05:44:21.7689591Z #6 0.506 ii  diffutils                       1:3.8-0ubuntu2                          amd64        File comparison utilities
+2025-01-14T05:44:21.7690338Z #6 0.506 ii  dirmngr                         2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - network certificate management service
+2025-01-14T05:44:21.7691149Z #6 0.506 ii  dpkg                            1.21.1ubuntu2.2                         amd64        Debian package management system
+2025-01-14T05:44:21.7691694Z #6 0.506 ii  dpkg-dev                        1.21.1ubuntu2.2                         all          Debian package development tools
+2025-01-14T05:44:21.7692360Z #6 0.506 ii  e2fsprogs                       1.46.5-2ubuntu1.1                       amd64        ext2/ext3/ext4 file system utilities
+2025-01-14T05:44:21.7692974Z #6 0.506 ii  findutils                       4.8.0-1ubuntu3                          amd64        utilities for finding files--find, xargs
+2025-01-14T05:44:21.7693529Z #6 0.506 ii  g++                             4:11.2.0-1ubuntu1                       amd64        GNU C++ compiler
+2025-01-14T05:44:21.7694118Z #6 0.506 ii  g++-11                          11.4.0-1ubuntu1~22.04                   amd64        GNU C++ compiler
+2025-01-14T05:44:21.7694613Z #6 0.506 ii  gcc                             4:11.2.0-1ubuntu1                       amd64        GNU C compiler
+2025-01-14T05:44:21.7695266Z #6 0.506 ii  gcc-11                          11.4.0-1ubuntu1~22.04                   amd64        GNU C compiler
+2025-01-14T05:44:21.7695988Z #6 0.506 ii  gcc-11-base:amd64               11.4.0-1ubuntu1~22.04                   amd64        GCC, the GNU Compiler Collection (base package)
+2025-01-14T05:44:21.7696968Z #6 0.506 ii  gcc-12-base:amd64               12.3.0-1ubuntu1~22.04                   amd64        GCC, the GNU Compiler Collection (base package)
+2025-01-14T05:44:21.7697685Z #6 0.506 ii  gnupg                           2.2.27-3ubuntu2.1                       all          GNU privacy guard - a free PGP replacement
+2025-01-14T05:44:21.7698486Z #6 0.507 ii  gnupg-l10n                      2.2.27-3ubuntu2.1                       all          GNU privacy guard - localization files
+2025-01-14T05:44:21.7699100Z #6 0.507 ii  gnupg-utils                     2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - utility programs
+2025-01-14T05:44:21.7699856Z #6 0.507 ii  gnupg2                          2.2.27-3ubuntu2.1                       all          GNU privacy guard - a free PGP replacement (dummy transitional package)
+2025-01-14T05:44:21.7700564Z #6 0.507 ii  gpg                             2.2.27-3ubuntu2.1                       amd64        GNU Privacy Guard -- minimalist public key operations
+2025-01-14T05:44:21.7701181Z #6 0.507 ii  gpg-agent                       2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - cryptographic agent
+2025-01-14T05:44:21.7701904Z #6 0.507 ii  gpg-wks-client                  2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - Web Key Service client
+2025-01-14T05:44:21.7702516Z #6 0.507 ii  gpg-wks-server                  2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - Web Key Service server
+2025-01-14T05:44:21.7703144Z #6 0.507 ii  gpgconf                         2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - core configuration utilities
+2025-01-14T05:44:21.7704014Z #6 0.507 ii  gpgsm                           2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - S/MIME version
+2025-01-14T05:44:21.7704612Z #6 0.507 ii  gpgv                            2.2.27-3ubuntu2.1                       amd64        GNU privacy guard - signature verification tool
+2025-01-14T05:44:21.7705129Z #6 0.507 ii  grep                            3.7-1build1                             amd64        GNU grep, egrep and fgrep
+2025-01-14T05:44:21.7706326Z #6 0.507 ii  gzip                            1.10-4ubuntu4.1                         amd64        GNU compression utilities
+2025-01-14T05:44:21.7706919Z #6 0.507 ii  hostname                        3.23ubuntu2                             amd64        utility to set/show the host name or domain name
+2025-01-14T05:44:21.7707619Z #6 0.507 ii  init-system-helpers             1.62                                    all          helper tools for all init systems
+2025-01-14T05:44:21.7708226Z #6 0.507 ii  libacl1:amd64                   2.3.1-1                                 amd64        access control list - shared library
+2025-01-14T05:44:21.7708786Z #6 0.507 ii  libapt-pkg6.0:amd64             2.4.10                                  amd64        package management runtime library
+2025-01-14T05:44:21.7709492Z #6 0.507 ii  libasan6:amd64                  11.4.0-1ubuntu1~22.04                   amd64        AddressSanitizer -- a fast memory error detector
+2025-01-14T05:44:21.7710152Z #6 0.507 ii  libassuan0:amd64                2.5.5-1build1                           amd64        IPC library for the GnuPG components
+2025-01-14T05:44:21.7710837Z #6 0.507 ii  libatomic1:amd64                12.3.0-1ubuntu1~22.04                   amd64        support library providing __atomic built-in functions
+2025-01-14T05:44:21.7711600Z #6 0.507 ii  libattr1:amd64                  1:2.5.1-1build1                         amd64        extended attribute handling - shared library
+2025-01-14T05:44:21.7712451Z #6 0.507 ii  libaudit-common                 1:3.0.7-1build1                         all          Dynamic library for security auditing - common files
+2025-01-14T05:44:21.7713150Z #6 0.507 ii  libaudit1:amd64                 1:3.0.7-1build1                         amd64        Dynamic library for security auditing
+2025-01-14T05:44:21.7713905Z #6 0.507 ii  libbinutils:amd64               2.38-4ubuntu2.3                         amd64        GNU binary utilities (private shared library)
+2025-01-14T05:44:21.7714512Z #6 0.507 ii  libblkid1:amd64                 2.37.2-4ubuntu3                         amd64        block device ID library
+2025-01-14T05:44:21.7715359Z #6 0.507 ii  libbz2-1.0:amd64                1.0.8-5build1                           amd64        high-quality block-sorting file compressor library - runtime
+2025-01-14T05:44:21.7716076Z #6 0.507 ii  libc-bin                        2.35-0ubuntu3.4                         amd64        GNU C Library: Binaries
+2025-01-14T05:44:21.7716832Z #6 0.507 ii  libc-dev-bin                    2.35-0ubuntu3.4                         amd64        GNU C Library: Development binaries
+2025-01-14T05:44:21.7717646Z #6 0.507 ii  libc6:amd64                     2.35-0ubuntu3.4                         amd64        GNU C Library: Shared libraries
+2025-01-14T05:44:21.7718410Z #6 0.507 ii  libc6-dev:amd64                 2.35-0ubuntu3.4                         amd64        GNU C Library: Development Libraries and Header Files
+2025-01-14T05:44:21.7719185Z #6 0.507 ii  libcap-ng0:amd64                0.7.9-2.2build3                         amd64        An alternate POSIX capabilities library
+2025-01-14T05:44:21.7720059Z #6 0.507 ii  libcap2:amd64                   1:2.44-1ubuntu0.22.04.1                 amd64        POSIX 1003.1e capabilities (library)
+2025-01-14T05:44:21.7720776Z #6 0.507 ii  libcc1-0:amd64                  12.3.0-1ubuntu1~22.04                   amd64        GCC cc1 plugin for GDB
+2025-01-14T05:44:21.7721690Z #6 0.507 ii  libcom-err2:amd64               1.46.5-2ubuntu1.1                       amd64        common error description library
+2025-01-14T05:44:21.7722621Z #6 0.507 ii  libcrypt-dev:amd64              1:4.4.27-1                              amd64        libcrypt development files
+2025-01-14T05:44:21.7723304Z #6 0.507 ii  libcrypt1:amd64                 1:4.4.27-1                              amd64        libcrypt shared library
+2025-01-14T05:44:21.7724154Z #6 0.507 ii  libctf-nobfd0:amd64             2.38-4ubuntu2.3                         amd64        Compact C Type Format library (runtime, no BFD dependency)
+2025-01-14T05:44:21.7724983Z #6 0.507 ii  libctf0:amd64                   2.38-4ubuntu2.3                         amd64        Compact C Type Format library (runtime, BFD dependency)
+2025-01-14T05:44:21.7725713Z #6 0.507 hi  libcublas-12-2                  12.2.1.16-1                             amd64        CUBLAS native runtime libraries
+2025-01-14T05:44:21.7726515Z #6 0.507 hi  libcublas-dev-12-2              12.2.1.16-1                             amd64        CUBLAS native dev links, headers
+2025-01-14T05:44:21.7727246Z #6 0.507 ii  libcufft-12-2                   11.0.8.103-1                            amd64        CUFFT native runtime libraries
+2025-01-14T05:44:21.7727843Z #6 0.507 ii  libcufft-dev-12-2               11.0.8.103-1                            amd64        CUFFT native dev links, headers
+2025-01-14T05:44:21.7728695Z #6 0.507 ii  libcufile-12-2                  1.7.2.10-1                              amd64        Library for GPU Direct Storage with CUDA 12.2
+2025-01-14T05:44:21.7729531Z #6 0.507 ii  libcufile-dev-12-2              1.7.2.10-1                              amd64        Library for GPU Direct Storage native dev links, headers
+2025-01-14T05:44:21.7730226Z #6 0.507 ii  libcurand-12-2                  10.3.3.141-1                            amd64        CURAND native runtime libraries
+2025-01-14T05:44:21.7731036Z #6 0.507 ii  libcurand-dev-12-2              10.3.3.141-1                            amd64        CURAND native dev links, headers
+2025-01-14T05:44:21.7731923Z #6 0.507 ii  libcusolver-12-2                11.5.2.141-1                            amd64        CUDA solver native runtime libraries
+2025-01-14T05:44:21.7732632Z #6 0.507 ii  libcusolver-dev-12-2            11.5.2.141-1                            amd64        CUDA solver native dev links, headers
+2025-01-14T05:44:21.7733497Z #6 0.507 ii  libcusparse-12-2                12.1.1.53-1                             amd64        CUSPARSE native runtime libraries
+2025-01-14T05:44:21.7734218Z #6 0.507 ii  libcusparse-dev-12-2            12.1.1.53-1                             amd64        CUSPARSE native dev links, headers
+2025-01-14T05:44:21.7735058Z #6 0.507 ii  libdb5.3:amd64                  5.3.28+dfsg1-0.8ubuntu3                 amd64        Berkeley v5.3 Database Libraries [runtime]
+2025-01-14T05:44:21.7736036Z #6 0.507 ii  libdebconfclient0:amd64         0.261ubuntu1                            amd64        Debian Configuration Management System (C-implementation library)
+2025-01-14T05:44:21.7737237Z #6 0.507 ii  libdpkg-perl                    1.21.1ubuntu2.2                         all          Dpkg perl modules
+2025-01-14T05:44:21.7738108Z #6 0.507 ii  libext2fs2:amd64                1.46.5-2ubuntu1.1                       amd64        ext2/ext3/ext4 file system libraries
+2025-01-14T05:44:21.7738995Z #6 0.507 ii  libffi8:amd64                   3.4.2-4                                 amd64        Foreign Function Interface library runtime
+2025-01-14T05:44:21.7739708Z #6 0.507 ii  libgcc-11-dev:amd64             11.4.0-1ubuntu1~22.04                   amd64        GCC support library (development files)
+2025-01-14T05:44:21.7740667Z #6 0.507 ii  libgcc-s1:amd64                 12.3.0-1ubuntu1~22.04                   amd64        GCC support library
+2025-01-14T05:44:21.7741436Z #6 0.507 ii  libgcrypt20:amd64               1.9.4-3ubuntu3                          amd64        LGPL Crypto library - runtime library
+2025-01-14T05:44:21.7742476Z #6 0.507 ii  libgdbm-compat4:amd64           1.23-1                                  amd64        GNU dbm database routines (legacy support runtime version) 
+2025-01-14T05:44:21.7743538Z #6 0.507 ii  libgdbm6:amd64                  1.23-1                                  amd64        GNU dbm database routines (runtime version) 
+2025-01-14T05:44:21.7744272Z #6 0.507 ii  libgmp10:amd64                  2:6.2.1+dfsg-3ubuntu1                   amd64        Multiprecision arithmetic library
+2025-01-14T05:44:21.7745096Z #6 0.507 ii  libgnutls30:amd64               3.7.3-4ubuntu1.2                        amd64        GNU TLS library - main runtime library
+2025-01-14T05:44:21.7745883Z #6 0.507 ii  libgomp1:amd64                  12.3.0-1ubuntu1~22.04                   amd64        GCC OpenMP (GOMP) support library
+2025-01-14T05:44:21.7746500Z #6 0.507 ii  libgpg-error0:amd64             1.43-3                                  amd64        GnuPG development runtime library
+2025-01-14T05:44:21.7747431Z #6 0.507 ii  libgssapi-krb5-2:amd64          1.19.2-2ubuntu0.2                       amd64        MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+2025-01-14T05:44:21.7748385Z #6 0.507 ii  libhogweed6:amd64               3.7.3-1build2                           amd64        low level cryptographic library (public-key cryptos)
+2025-01-14T05:44:21.7749201Z #6 0.507 ii  libidn2-0:amd64                 2.3.2-2build1                           amd64        Internationalized domain names (IDNA2008/TR46) library
+2025-01-14T05:44:21.7750194Z #6 0.507 ii  libisl23:amd64                  0.24-2build1                            amd64        manipulating sets and relations of integer points bounded by linear constraints
+2025-01-14T05:44:21.7751019Z #6 0.507 ii  libitm1:amd64                   12.3.0-1ubuntu1~22.04                   amd64        GNU Transactional Memory Library
+2025-01-14T05:44:21.7751776Z #6 0.507 ii  libk5crypto3:amd64              1.19.2-2ubuntu0.2                       amd64        MIT Kerberos runtime libraries - Crypto Library
+2025-01-14T05:44:21.7752896Z #6 0.507 ii  libkeyutils1:amd64              1.6.1-2ubuntu3                          amd64        Linux Key Management Utilities (library)
+2025-01-14T05:44:21.7753681Z #6 0.507 ii  libkrb5-3:amd64                 1.19.2-2ubuntu0.2                       amd64        MIT Kerberos runtime libraries
+2025-01-14T05:44:21.7754396Z #6 0.507 ii  libkrb5support0:amd64           1.19.2-2ubuntu0.2                       amd64        MIT Kerberos runtime libraries - Support library
+2025-01-14T05:44:21.7755320Z #6 0.507 ii  libksba8:amd64                  1.6.0-2ubuntu0.2                        amd64        X.509 and CMS support library
+2025-01-14T05:44:21.7756069Z #6 0.507 ii  libldap-2.5-0:amd64             2.5.16+dfsg-0ubuntu0.22.04.1            amd64        OpenLDAP libraries
+2025-01-14T05:44:21.7757048Z #6 0.507 ii  liblsan0:amd64                  12.3.0-1ubuntu1~22.04                   amd64        LeakSanitizer -- a memory leak detector (runtime)
+2025-01-14T05:44:21.7757868Z #6 0.507 ii  liblz4-1:amd64                  1.9.3-2build2                           amd64        Fast LZ compression algorithm library - runtime
+2025-01-14T05:44:21.7758601Z #6 0.507 ii  liblzma5:amd64                  5.2.5-2ubuntu1                          amd64        XZ-format compression library
+2025-01-14T05:44:21.7759403Z #6 0.507 ii  libmount1:amd64                 2.37.2-4ubuntu3                         amd64        device mounting library
+2025-01-14T05:44:21.7760176Z #6 0.507 ii  libmpc3:amd64                   1.2.1-2build1                           amd64        multiple precision complex floating-point library
+2025-01-14T05:44:21.7760928Z #6 0.507 ii  libmpfr6:amd64                  4.1.0-3build3                           amd64        multiple precision floating-point computation
+2025-01-14T05:44:21.7761778Z #6 0.507 ii  libncurses6:amd64               6.3-2ubuntu0.1                          amd64        shared libraries for terminal handling
+2025-01-14T05:44:21.7762801Z #6 0.507 ii  libncursesw6:amd64              6.3-2ubuntu0.1                          amd64        shared libraries for terminal handling (wide character support)
+2025-01-14T05:44:21.7763751Z #6 0.507 ii  libnettle8:amd64                3.7.3-1build2                           amd64        low level cryptographic library (symmetric and one-way cryptos)
+2025-01-14T05:44:21.7764660Z #6 0.507 ii  libnpp-12-2                     12.1.1.14-1                             amd64        NPP native runtime libraries
+2025-01-14T05:44:21.7765258Z #6 0.507 ii  libnpp-dev-12-2                 12.1.1.14-1                             amd64        NPP native dev links, headers
+2025-01-14T05:44:21.7766157Z #6 0.507 ii  libnpth0:amd64                  1.6-3build2                             amd64        replacement for GNU Pth using system threads
+2025-01-14T05:44:21.7766891Z #6 0.507 ii  libnsl-dev:amd64                1.3.0-2build2                           amd64        libnsl development files
+2025-01-14T05:44:21.7767579Z #6 0.507 ii  libnsl2:amd64                   1.3.0-2build2                           amd64        Public client interface for NIS(YP) and NIS+
+2025-01-14T05:44:21.7768447Z #6 0.507 ii  libnvjitlink-12-2               12.2.140-1                              amd64        NVJIT link native runtime libraries
+2025-01-14T05:44:21.7769130Z #6 0.507 ii  libnvjitlink-dev-12-2           12.2.140-1                              amd64        NVJIT native dev links, headers
+2025-01-14T05:44:21.7769805Z #6 0.507 ii  libnvjpeg-12-2                  12.2.2.4-1                              amd64        NVJPEG native runtime libraries
+2025-01-14T05:44:21.7770578Z #6 0.507 ii  libnvjpeg-dev-12-2              12.2.2.4-1                              amd64        NVJPEG native dev links, headers
+2025-01-14T05:44:21.7771380Z #6 0.507 ii  libp11-kit0:amd64               0.24.0-6build1                          amd64        library for loading and coordinating access to PKCS#11 modules - runtime
+2025-01-14T05:44:21.7772211Z #6 0.507 ii  libpam-modules:amd64            1.4.0-11ubuntu2.3                       amd64        Pluggable Authentication Modules for PAM
+2025-01-14T05:44:21.7773452Z #6 0.507 ii  libpam-modules-bin              1.4.0-11ubuntu2.3                       amd64        Pluggable Authentication Modules for PAM - helper binaries
+2025-01-14T05:44:21.7774384Z #6 0.507 ii  libpam-runtime                  1.4.0-11ubuntu2.3                       all          Runtime support for the PAM library
+2025-01-14T05:44:21.7775206Z #6 0.507 ii  libpam0g:amd64                  1.4.0-11ubuntu2.3                       amd64        Pluggable Authentication Modules library
+2025-01-14T05:44:21.7776017Z #6 0.507 ii  libpcre2-8-0:amd64              10.39-3ubuntu0.1                        amd64        New Perl Compatible Regular Expression Library- 8 bit runtime files
+2025-01-14T05:44:21.7777108Z #6 0.507 ii  libpcre3:amd64                  2:8.39-13ubuntu0.22.04.1                amd64        Old Perl 5 Compatible Regular Expression Library - runtime files
+2025-01-14T05:44:21.7777934Z #6 0.507 ii  libperl5.34:amd64               5.34.0-3ubuntu1.2                       amd64        shared Perl library
+2025-01-14T05:44:21.7778733Z #6 0.507 ii  libprocps8:amd64                2:3.3.17-6ubuntu2                       amd64        library for accessing process information from /proc
+2025-01-14T05:44:21.7779432Z #6 0.507 ii  libquadmath0:amd64              12.3.0-1ubuntu1~22.04                   amd64        GCC Quad-Precision Math Library
+2025-01-14T05:44:21.7780195Z #6 0.507 ii  libreadline8:amd64              8.1.2-1                                 amd64        GNU readline and history libraries, run-time libraries
+2025-01-14T05:44:21.7781015Z #6 0.507 ii  libsasl2-2:amd64                2.1.27+dfsg2-3ubuntu1.2                 amd64        Cyrus SASL - authentication abstraction library
+2025-01-14T05:44:21.7781768Z #6 0.507 ii  libsasl2-modules-db:amd64       2.1.27+dfsg2-3ubuntu1.2                 amd64        Cyrus SASL - pluggable authentication modules (DB)
+2025-01-14T05:44:21.7782788Z #6 0.507 ii  libseccomp2:amd64               2.5.3-2ubuntu2                          amd64        high level interface to Linux seccomp filter
+2025-01-14T05:44:21.7783513Z #6 0.507 ii  libselinux1:amd64               3.3-1build2                             amd64        SELinux runtime shared libraries
+2025-01-14T05:44:21.7784221Z #6 0.507 ii  libsemanage-common              3.3-1build2                             all          Common files for SELinux policy management libraries
+2025-01-14T05:44:21.7785086Z #6 0.507 ii  libsemanage2:amd64              3.3-1build2                             amd64        SELinux policy management library
+2025-01-14T05:44:21.7785782Z #6 0.507 ii  libsepol2:amd64                 3.3-1build1                             amd64        SELinux library for manipulating binary security policies
+2025-01-14T05:44:21.7786530Z #6 0.507 ii  libsmartcols1:amd64             2.37.2-4ubuntu3                         amd64        smart column output alignment library
+2025-01-14T05:44:21.7787196Z #6 0.507 ii  libsqlite3-0:amd64              3.37.2-2ubuntu0.1                       amd64        SQLite 3 shared library
+2025-01-14T05:44:21.7787806Z #6 0.507 ii  libss2:amd64                    1.46.5-2ubuntu1.1                       amd64        command-line interface parsing library
+2025-01-14T05:44:21.7788514Z #6 0.507 ii  libssl3:amd64                   3.0.2-0ubuntu1.10                       amd64        Secure Sockets Layer toolkit - shared libraries
+2025-01-14T05:44:21.7789205Z #6 0.507 ii  libstdc++-11-dev:amd64          11.4.0-1ubuntu1~22.04                   amd64        GNU Standard C++ Library v3 (development files)
+2025-01-14T05:44:21.7789823Z #6 0.507 ii  libstdc++6:amd64                12.3.0-1ubuntu1~22.04                   amd64        GNU Standard C++ Library v3
+2025-01-14T05:44:21.7790540Z #6 0.507 ii  libsystemd0:amd64               249.11-0ubuntu3.10                      amd64        systemd utility library
+2025-01-14T05:44:21.7791293Z #6 0.507 ii  libtasn1-6:amd64                4.18.0-4build1                          amd64        Manage ASN.1 structures (runtime)
+2025-01-14T05:44:21.7792161Z #6 0.507 ii  libtinfo6:amd64                 6.3-2ubuntu0.1                          amd64        shared low-level terminfo library for terminal handling
+2025-01-14T05:44:21.7793005Z #6 0.507 ii  libtirpc-common                 1.3.2-2ubuntu0.1                        all          transport-independent RPC library - common files
+2025-01-14T05:44:21.7793711Z #6 0.507 ii  libtirpc-dev:amd64              1.3.2-2ubuntu0.1                        amd64        transport-independent RPC library - development files
+2025-01-14T05:44:21.7794464Z #6 0.507 ii  libtirpc3:amd64                 1.3.2-2ubuntu0.1                        amd64        transport-independent RPC library
+2025-01-14T05:44:21.7795185Z #6 0.507 ii  libtsan0:amd64                  11.4.0-1ubuntu1~22.04                   amd64        ThreadSanitizer -- a Valgrind-based detector of data races (runtime)
+2025-01-14T05:44:21.7795920Z #6 0.507 ii  libubsan1:amd64                 12.3.0-1ubuntu1~22.04                   amd64        UBSan -- undefined behaviour sanitizer (runtime)
+2025-01-14T05:44:21.7796660Z #6 0.507 ii  libudev1:amd64                  249.11-0ubuntu3.10                      amd64        libudev shared library
+2025-01-14T05:44:21.7797260Z #6 0.507 ii  libunistring2:amd64             1.0-1                                   amd64        Unicode string library for C
+2025-01-14T05:44:21.7797854Z #6 0.507 ii  libuuid1:amd64                  2.37.2-4ubuntu3                         amd64        Universally Unique ID library
+2025-01-14T05:44:21.7798569Z #6 0.507 ii  libxxhash0:amd64                0.8.1-1                                 amd64        shared library for xxhash
+2025-01-14T05:44:21.7799155Z #6 0.507 ii  libzstd1:amd64                  1.4.8+dfsg-3build1                      amd64        fast lossless compression algorithm
+2025-01-14T05:44:21.7799767Z #6 0.507 ii  linux-libc-dev:amd64            5.15.0-88.98                            amd64        Linux Kernel Headers for development
+2025-01-14T05:44:21.7800568Z #6 0.507 ii  login                           1:4.8.1-2ubuntu2.1                      amd64        system login tools
+2025-01-14T05:44:21.7801165Z #6 0.507 ii  logsave                         1.46.5-2ubuntu1.1                       amd64        save the output of a command in a log file
+2025-01-14T05:44:21.7801708Z #6 0.507 ii  lsb-base                        11.1.0ubuntu4                           all          Linux Standard Base init script functionality
+2025-01-14T05:44:21.7802398Z #6 0.507 ii  lto-disabled-list               24                                      all          list of packages not to build with LTO
+2025-01-14T05:44:21.7802968Z #6 0.507 ii  make                            4.3-4.1build1                           amd64        utility for directing compilation
+2025-01-14T05:44:21.7803591Z #6 0.507 ii  mawk                            1.3.4.20200120-3                        amd64        Pattern scanning and text processing language
+2025-01-14T05:44:21.7804225Z #6 0.507 ii  mount                           2.37.2-4ubuntu3                         amd64        tools for mounting and manipulating filesystems
+2025-01-14T05:44:21.7804942Z #6 0.507 ii  ncurses-base                    6.3-2ubuntu0.1                          all          basic terminal type definitions
+2025-01-14T05:44:21.7805745Z #6 0.507 ii  ncurses-bin                     6.3-2ubuntu0.1                          amd64        terminal-related programs and man pages
+2025-01-14T05:44:21.7806387Z #6 0.507 ii  nsight-compute-2023.2.0         2023.2.0.16-1                           amd64        NVIDIA Nsight Compute
+2025-01-14T05:44:21.7807000Z #6 0.507 ii  openssl                         3.0.2-0ubuntu1.12                       amd64        Secure Sockets Layer toolkit - cryptographic utility
+2025-01-14T05:44:21.7807704Z #6 0.507 ii  passwd                          1:4.8.1-2ubuntu2.1                      amd64        change and administer password and group data
+2025-01-14T05:44:21.7808459Z #6 0.507 ii  patch                           2.7.6-7build2                           amd64        Apply a diff file to an original
+2025-01-14T05:44:21.7809027Z #6 0.507 ii  perl                            5.34.0-3ubuntu1.2                       amd64        Larry Wall's Practical Extraction and Report Language
+2025-01-14T05:44:21.7809746Z #6 0.507 ii  perl-base                       5.34.0-3ubuntu1.2                       amd64        minimal Perl system
+2025-01-14T05:44:21.7810316Z #6 0.507 ii  perl-modules-5.34               5.34.0-3ubuntu1.2                       all          Core Perl modules
+2025-01-14T05:44:21.7811043Z #6 0.507 ii  pinentry-curses                 1.1.1-1build2                           amd64        curses-based PIN or pass-phrase entry dialog for GnuPG
+2025-01-14T05:44:21.7811706Z #6 0.507 ii  procps                          2:3.3.17-6ubuntu2                       amd64        /proc file system utilities
+2025-01-14T05:44:21.7812366Z #6 0.507 ii  readline-common                 8.1.2-1                                 all          GNU readline and history libraries, common files
+2025-01-14T05:44:21.7813028Z #6 0.507 ii  rpcsvc-proto                    1.4.2-0ubuntu6                          amd64        RPC protocol compiler and definitions
+2025-01-14T05:44:21.7813643Z #6 0.507 ii  sed                             4.8-1ubuntu2                            amd64        GNU stream editor for filtering/transforming text
+2025-01-14T05:44:21.7814224Z #6 0.507 ii  sensible-utils                  0.0.17                                  all          Utilities for sensible alternative selection
+2025-01-14T05:44:21.7814925Z #6 0.507 ii  sysvinit-utils                  3.01-1ubuntu1                           amd64        System-V-like utilities
+2025-01-14T05:44:21.7815521Z #6 0.507 ii  tar                             1.34+dfsg-1ubuntu0.1.22.04.1            amd64        GNU version of the tar archiving utility
+2025-01-14T05:44:21.7816226Z #6 0.507 ii  ubuntu-keyring                  2021.03.26                              all          GnuPG keys of the Ubuntu archive
+2025-01-14T05:44:21.7817193Z #6 0.507 ii  usrmerge                        25ubuntu2                               all          Convert the system to the merged /usr directories scheme
+2025-01-14T05:44:21.7817826Z #6 0.507 ii  util-linux                      2.37.2-4ubuntu3                         amd64        miscellaneous system utilities
+2025-01-14T05:44:21.7818461Z #6 0.507 ii  xz-utils                        5.2.5-2ubuntu1                          amd64        XZ-format compression utilities
+2025-01-14T05:44:21.7819028Z #6 0.507 ii  zlib1g:amd64                    1:1.2.11.dfsg-2ubuntu9.2                amd64        compression library - runtime
+2025-01-14T05:44:21.7819576Z #6 DONE 0.5s
