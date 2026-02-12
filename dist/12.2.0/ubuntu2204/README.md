@@ -86,6 +86,10 @@ root@b59d483de2ed:/# dpkg -L cuda-keyring
 /usr/share/keyrings/cuda-archive-keyring.gpg
 root@b59d483de2ed:/#
 
+root@b59d483de2ed:/# cat /etc/apt/sources.list.d/cuda-ubuntu2204-x86_64.list
+deb [signed-by=/usr/share/keyrings/cuda-archive-keyring.gpg] https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/ /
+root@b59d483de2ed:/#
+
 root@b59d483de2ed:/# dpkg -L cuda-cudart-12-2
 /.
 /usr
