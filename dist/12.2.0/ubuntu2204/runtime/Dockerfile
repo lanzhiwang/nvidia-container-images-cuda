@@ -1,5 +1,6 @@
 ARG IMAGE_NAME
 FROM ${IMAGE_NAME}:12.2.0-base-ubuntu22.04 as base
+# [base 1/1] FROM docker.io/nvidia/cuda:12.2.0-base-ubuntu22.04@sha256:ecdf8549dd5f12609e365217a64dedde26ecda26da8f3ff3f82def6749f53051
 
 ENV NV_CUDA_LIB_VERSION 12.2.0-1
 
@@ -38,9 +39,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libcusparse-12-2=${NV_LIBCUSPARSE_VERSION} \
     ${NV_LIBCUBLAS_PACKAGE} \
     && rm -rf /var/lib/apt/lists/*
+# RUN
+# apt-get update &&
+# apt-get install -y --no-install-recommends cuda-libraries-12-2=12.2.0-1 libnpp-12-2=12.1.1.14-1 cuda-nvtx-12-2=12.2.53-1 libcusparse-12-2=12.1.1.53-1 libcublas-12-2=12.2.1.16-1 &&
+# rm -rf /var/lib/apt/lists/*
 
 # Keep apt from auto upgrading the cublas and nccl packages. See https://gitlab.com/nvidia/container-images/cuda/-/issues/88
 RUN apt-mark hold ${NV_LIBCUBLAS_PACKAGE_NAME}
+# RUN apt-mark hold libcublas-12-2
 
 # Add entrypoint items
 COPY entrypoint.d/ /opt/nvidia/entrypoint.d/
